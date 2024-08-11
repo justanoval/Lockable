@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.justanoval.lockable.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractBlockMixin",
+    "BlockMixin",
+    "HopperBlockEntityMixin",
+    "LockableContainerBlockEntityMixin",
+    "ServerPlayerInteractionManagerMixin",
+    "access.HopperBlockEntityAccessor",
+    "access.LivingEntityInvoker",
+    "block.ChestBlockMixin"
+  ],
+  "client": [
+    "client.ClientPlayerInteractionManagerMixin",
+    "client.renderers.ChestBlockEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

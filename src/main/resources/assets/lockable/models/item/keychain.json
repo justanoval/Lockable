@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lockable:item/keychain"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lockable:keys": 0.16
+      },
+      "model": "lockable:item/keychain_1"
+    },
+    {
+      "predicate": {
+        "lockable:keys": 0.33
+      },
+      "model": "lockable:item/keychain_2"
+    },
+    {
+      "predicate": {
+        "lockable:keys": 0.5
+      },
+      "model": "lockable:item/keychain_3"
+    }
+  ]
+}

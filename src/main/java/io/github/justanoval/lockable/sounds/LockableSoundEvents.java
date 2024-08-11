@@ -1,0 +1,20 @@
+package io.github.justanoval.lockable.sounds;
+
+import io.github.justanoval.lockable.LockableMod;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
+
+public final class LockableSoundEvents {
+	private static final Identifier KEY_JIGGLE_ID = LockableMod.id("item.key.jiggle");
+	private static final Identifier LOCK_JIGGLE_ID = LockableMod.id("item.lock.jiggle");
+
+	public static final SoundEvent KEY_JIGGLE = SoundEvent.createVariableRangeEvent(KEY_JIGGLE_ID);
+	public static final SoundEvent LOCK_JIGGLE = SoundEvent.createVariableRangeEvent(LOCK_JIGGLE_ID);
+
+	public static void register() {
+		Registry.register(Registries.SOUND_EVENT, KEY_JIGGLE_ID, KEY_JIGGLE);
+		Registry.register(Registries.SOUND_EVENT, LOCK_JIGGLE_ID, LOCK_JIGGLE);
+	}
+}

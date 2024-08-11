@@ -1,0 +1,12 @@
+{
+  "item.key.jiggle": {
+    "sounds": [
+      "lockable:key_jiggle"
+    ]
+  },
+  "item.lock.jiggle": {
+    "sounds": [
+      "lockable:lock_jiggle"
+    ]
+  }
+}

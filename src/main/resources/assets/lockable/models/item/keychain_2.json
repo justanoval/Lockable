@@ -1,0 +1,6 @@
+{
+  "parent": "lockable:item/keychain",
+  "textures": {
+    "layer0": "lockable:item/keychain_2"
+  }
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.justanoval.lockable",
+		"id": "lockable",
+		"version": "${version}",
+		"metadata": {
+			"name": "Lockable",
+			"description": "Adds locks and keys to allow players to protect their items, or steal from others.",
+			"contributors": {
+				"justan oval": "Author"
+			},
+			"contact": {
+				"homepage": "https://justanoval.com/",
+				"issues": "https://github.com/justanoval/Lockable/issues",
+				"sources": "https://github.com/justanoval/Lockable"
+			},
+			"icon": "assets/lockable/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "io.github.justanoval.lockable.LockableMod",
+			"client_init": "io.github.justanoval.lockable.client.LockableClientMod"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.19.1"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=7.0.2"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.20"
+			}
+		]
+	},
+	"mixin": "lockable.mixins.json",
+	"modmenu": {
+		"links": {
+			"modmenu.lockable.website": "https://justanoval.com/"
+		},
+		"update_checker": true
+	}
+}

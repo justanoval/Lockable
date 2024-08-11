@@ -1,0 +1,25 @@
+{
+  "item.lockable.golden_key": "Golden Key",
+  "item.lockable.scrap_lock": "Scrap Lock",
+  "item.lockable.master_key": "Master Key",
+
+  "item.lockable.weathered_lock": "Weathered Lock",
+  "item.lockable.weathered_lock.description": "A lock so weathered that a normal key won't work",
+
+  "item.lockable.bone_key": "Bone Key",
+  "item.lockable.bone_key.description.use": "Unlocks or locks any lock",
+  "item.lockable.bone_key.description.chance": "%d%% chance to break on use",
+
+  "item.lockable.key.fail": "You're unable to unlock that lock",
+  "item.lockable.key.break": "Your key broke!",
+
+  "item.lockable.keychain": "Keychain",
+  "item.lockable.keychain.count": "(%1$d of %2$d)",
+  "item.lockable.keychain.incorrect": "Your keychain does not have the right key!",
+
+  "item.lockable.lock.has_lock": "You must take the lock off first!",
+  "item.lockable.lock.has_lock.put_lock": "That block already has a lock!",
+  "item.lockable.lock.locked": "That block is locked!",
+
+  "modmenu.lockable.website": "More by me"
+}
