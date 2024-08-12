@@ -15,19 +15,19 @@ public abstract class AbstractKeyItem extends Item implements KeyItem {
 	}
 
 	@Override
-	public boolean canUseKey(ItemStack stack, PlayerEntity player, LockableBlockEntity lockable) {
-		return !(lockable.hasLock() && lockable.getLock().getItem() instanceof LockItem lockItem && !lockItem.canUseKey(stack, lockable.getLock(), player, lockable));
+	public boolean canUseKey(ItemStack itemStack, PlayerEntity player, LockableBlockEntity lockable) {
+		return !(lockable.hasLock() && lockable.getLock().getItem() instanceof LockItem lockItem && !lockItem.canUseKey(itemStack, lockable.getLock(), player, lockable));
 	}
 
 	@Override
-	public KeyItemInteraction tryUseKey(ItemStack stack, PlayerEntity player, LockableBlockEntity lockable) {
-		if (lockable.hasLock() && stack.getItem() instanceof KeyItem && this.canUseKey(stack, player, lockable)) {
+	public KeyItemInteraction tryUseKey(ItemStack itemStack, PlayerEntity player, LockableBlockEntity lockable) {
+		if (lockable.hasLock() && itemStack.getItem() instanceof KeyItem && this.canUseKey(itemStack, player, lockable)) {
 			if (lockable.isLocked()) {
 				return KeyItemInteraction.UNLOCK;
 			} else {
 				return KeyItemInteraction.LOCK;
 			}
-		} else if (lockable.hasLock() && stack.getItem() instanceof KeyItem) {
+		} else if (lockable.hasLock() && itemStack.getItem() instanceof KeyItem) {
 			return KeyItemInteraction.FAIL;
 		}
 

@@ -90,8 +90,8 @@ public class KeychainItem extends AbstractKeyItem {
 	}
 
 	@Override
-	public boolean canUseKey(ItemStack stack, PlayerEntity player, LockableBlockEntity lockable) {
-		List<ItemStack> stacks = stack.get(LockableDataComponents.KEYCHAIN_COMPONENT);
+	public boolean canUseKey(ItemStack itemStack, PlayerEntity player, LockableBlockEntity lockable) {
+		List<ItemStack> stacks = itemStack.get(LockableDataComponents.KEYCHAIN_COMPONENT);
 
 		if (stacks == null) {
 			return false;
@@ -99,7 +99,7 @@ public class KeychainItem extends AbstractKeyItem {
 
 		for (ItemStack keyStack : stacks) {
 			if (keyStack.getItem() instanceof NormalKeyItem keyItem && keyItem.canUseKey(keyStack, player, lockable)) {
-				return super.canUseKey(stack, player, lockable);
+				return super.canUseKey(itemStack, player, lockable);
 			}
 		}
 

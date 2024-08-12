@@ -16,13 +16,13 @@ public class NormalKeyItem extends AbstractKeyItem {
 	}
 
 	@Override
-	public boolean canUseKey(ItemStack stack, PlayerEntity player, LockableBlockEntity lockable) {
-		Text keyText = stack.get(DataComponentTypes.CUSTOM_NAME);
+	public boolean canUseKey(ItemStack itemStack, PlayerEntity player, LockableBlockEntity lockable) {
+		Text keyText = itemStack.get(DataComponentTypes.CUSTOM_NAME);
 		String keyName = keyText == null ? LockableMod.NULL_PIN : keyText.getString();
 
 		Text lockText = lockable.getLock().get(DataComponentTypes.CUSTOM_NAME);
 		String lockName = lockText == null ? LockableMod.NULL_PIN : lockText.getString();
 
-		return (Objects.equals(lockName, keyName) || Objects.equals(lockName, LockableMod.NULL_PIN)) && super.canUseKey(stack, player, lockable);
+		return (Objects.equals(lockName, keyName) || Objects.equals(lockName, LockableMod.NULL_PIN)) && super.canUseKey(itemStack, player, lockable);
 	}
 }

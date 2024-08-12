@@ -107,4 +107,9 @@ public abstract class LockableContainerBlockEntityMixin extends BlockEntity impl
 	public ItemStack getLock() {
 		return this.itemStack;
 	}
+
+	@Override
+	public BlockEntity getBlockEntity() {
+		return this;
+	}
 }

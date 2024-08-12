@@ -1,5 +1,6 @@
 package io.github.justanoval.lockable.api.entity;
 
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemStack;
 
 public interface LockableBlockEntity {
@@ -10,4 +11,6 @@ public interface LockableBlockEntity {
 	void setLock(ItemStack itemStack);
 	void removeLock();
 	ItemStack getLock();
+
+	BlockEntity getBlockEntity();
 }

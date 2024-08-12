@@ -100,4 +100,9 @@ public abstract class AbstractLockableBlockEntity extends BlockEntity implements
 	public ItemStack getLock() {
 		return this.itemStack;
 	}
+
+	@Override
+	public BlockEntity getBlockEntity() {
+		return this;
+	}
 }
