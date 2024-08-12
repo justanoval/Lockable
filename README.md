@@ -10,6 +10,9 @@ _ModMenu_.
 ### Curious on the state of development?
 If you want to know what features are currently being worked on, check out the [latest milestone](https://github.com/justanoval/Lockable/milestones). There, you'll see all the issues I plan to work on for the next update.
 
+## Have a question?
+If you have a question or found a bug, [please make an issue](https://github.com/justanoval/Lockable/issues). If you have a question, make sure to [read the FAQ](https://github.com/justanoval/Lockable/wiki/FAQ) first!
+
 ## Who are you?
 I am [justan oval](https://justanoval.com/). You may (or may not) know me from [my YouTube channel](https://www.youtube.com/@justanoval), which has nothing to do with Minecraft.
 
