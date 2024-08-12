@@ -18,6 +18,6 @@ I am [justan oval](https://justanoval.com/). You may (or may not) know me from [
 
 I started developing for Minecraft around 2019-2020. I used to make plugins for events ran for content creators. I dabbled in mod development here and there, but only got into mod development in 2024.
 
-You can learn more about me on [my website](https://justanoval.com/).
+If you want to see the other things I work on, check out [my website](https://justanoval.com/). I produce music, make animations, write stories, sell merchandise, and make games.
 
 ![justanoval](https://github.com/user-attachments/assets/1da1f23b-77d4-4bb0-8a5b-e5b2424292ea)
