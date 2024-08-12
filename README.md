@@ -13,7 +13,7 @@ If you want to know what features are currently being worked on, check out the [
 ## Have a question?
 If you have a question or found a bug, [please make an issue](https://github.com/justanoval/Lockable/issues). If you have a question, make sure to [read the FAQ](https://github.com/justanoval/Lockable/wiki/FAQ) first!
 
-## Who are you?
+## Who am I?
 I am [justan oval](https://justanoval.com/). You may (or may not) know me from [my YouTube channel](https://www.youtube.com/@justanoval), which has nothing to do with Minecraft.
 
 I started developing for Minecraft around 2019-2020. I used to make plugins for events ran for content creators. I dabbled in mod development here and there, but only got into mod development in 2024.
