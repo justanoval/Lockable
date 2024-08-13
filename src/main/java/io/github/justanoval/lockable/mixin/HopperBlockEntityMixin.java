@@ -19,9 +19,9 @@ public abstract class HopperBlockEntityMixin {
 	@Inject(method = "extract", at = @At("HEAD"), cancellable = true)
 	private static void extract(World world, Hopper hopper, CallbackInfoReturnable<Boolean> cir) {
 		BlockPos pos = BlockPos.create(hopper.getHopperX(), hopper.getHopperY() + 1.0D, hopper.getHopperZ());
-		BlockState state = world.getBlockState(pos);
+		BlockEntity blockEntity = world.getBlockEntity(pos);
 
-		Lockable.as(state, world, pos, lockable -> {
+		Lockable.as(blockEntity, lockable -> {
 			if (lockable.isLocked()) {
 				cir.setReturnValue(false);
 			}
