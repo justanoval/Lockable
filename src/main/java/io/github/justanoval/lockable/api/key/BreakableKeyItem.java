@@ -1,9 +1,7 @@
-package io.github.justanoval.lockable.items.key;
+package io.github.justanoval.lockable.api.key;
 
 import io.github.justanoval.lockable.api.entity.LockableBlockEntity;
-import io.github.justanoval.lockable.api.key.AbstractKeyItem;
-import io.github.justanoval.lockable.networking.KeyBreakPayload;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -23,7 +21,13 @@ public abstract class BreakableKeyItem extends AbstractKeyItem {
 	public abstract Float getBreakChance();
 
 	public void breakKey(ItemStack itemStack, ServerPlayerEntity player) {
-		ServerPlayNetworking.send(player, new KeyBreakPayload(itemStack.copy()));
+		// TODO: future proofing for when i add offhand stuff, but not sure if this works
+		if (player.getOffHandStack() == itemStack) {
+			player.onEquippedItemBroken(itemStack.getItem(), EquipmentSlot.OFFHAND);
+		} else {
+			player.onEquippedItemBroken(itemStack.getItem(), EquipmentSlot.MAINHAND);
+		}
+
 		player.sendMessage(this.getBrokenMessage(), true);
 		player.getInventory().removeStack(player.getInventory().getSlotWithStack(itemStack), 1);
 	}
@@ -32,8 +36,7 @@ public abstract class BreakableKeyItem extends AbstractKeyItem {
 		Float breakChance = getBreakChance();
 		World world = player.getWorld();
 
-		float v = world.random.nextFloat();
-		if (!world.isClient && v < breakChance) {
+		if (!world.isClient && world.random.nextFloat() < breakChance) {
 			this.breakKey(itemStack, (ServerPlayerEntity) player);
 		}
 	}

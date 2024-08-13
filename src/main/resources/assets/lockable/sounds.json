@@ -1,12 +1,164 @@
 {
   "item.key.jiggle": {
+    "subtitle": "subtitle.lockable.item.key.jiggle",
     "sounds": [
       "lockable:key_jiggle"
     ]
   },
-  "item.lock.jiggle": {
+  "entity.lock.jiggle": {
+    "subtitle": "subtitle.lockable.entity.lock.jiggle",
     "sounds": [
       "lockable:lock_jiggle"
+    ]
+  },
+  "entity.scrap_lock.place": {
+    "subtitle": "subtitle.lockable.entity.scrap_lock.place",
+    "sounds": [
+      {
+        "name": "minecraft:block/chain/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break4",
+        "volume": 0.5
+      }
+    ]
+  },
+  "entity.scrap_lock.remove": {
+    "subtitle": "subtitle.lockable.entity.scrap_lock.remove",
+    "sounds": [
+      {
+        "name": "minecraft:block/chain/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break4",
+        "volume": 0.5
+      }
+    ]
+  },
+  "entity.scrap_lock.lock": {
+    "subtitle": "subtitle.lockable.entity.scrap_lock.lock",
+    "sounds": [
+      {
+        "name": "minecraft:block/iron_door/close1",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/close2",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/close3",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/close4",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.scrap_lock.unlock": {
+    "subtitle": "subtitle.lockable.entity.scrap_lock.unlock",
+    "sounds": [
+      {
+        "name": "minecraft:block/iron_door/open1",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/open2",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/open3",
+        "volume": 0.9
+      },
+      {
+        "name": "minecraft:block/iron_door/open4",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.weathered_lock.place": {
+    "subtitle": "subtitle.lockable.entity.weathered_lock.place",
+    "sounds": [
+      {
+        "name": "minecraft:block/chain/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break4",
+        "volume": 0.5
+      }
+    ]
+  },
+  "entity.weathered_lock.remove": {
+    "subtitle": "subtitle.lockable.entity.weathered_lock.remove",
+    "sounds": [
+      {
+        "name": "minecraft:block/chain/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "minecraft:block/chain/break4",
+        "volume": 0.5
+      }
+    ]
+  },
+  "entity.weathered_lock.lock": {
+    "subtitle": "subtitle.lockable.entity.weathered_lock.lock",
+    "sounds": [
+      "minecraft:block/copper_door/toggle1",
+      "minecraft:block/copper_door/toggle2",
+      "minecraft:block/copper_door/toggle3"
+    ]
+  },
+  "entity.weathered_lock.unlock": {
+    "subtitle": "subtitle.lockable.entity.weathered_lock.unlock",
+    "sounds": [
+      "minecraft:block/copper_door/toggle1",
+      "minecraft:block/copper_door/toggle2",
+      {
+        "name": "minecraft:block/copper_door/toggle2",
+        "pitch": 1.1
+      },
+      "minecraft:block/copper_door/toggle3",
+      {
+        "name": "minecraft:block/copper_door/toggle3",
+        "pitch": 1.1
+      }
     ]
   }
 }

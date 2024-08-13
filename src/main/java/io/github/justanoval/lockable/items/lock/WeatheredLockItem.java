@@ -4,6 +4,7 @@ import io.github.justanoval.lockable.LockableMod;
 import io.github.justanoval.lockable.api.entity.LockableBlockEntity;
 import io.github.justanoval.lockable.api.lock.AbstractLockItem;
 import io.github.justanoval.lockable.items.key.BoneKeyItem;
+import io.github.justanoval.lockable.sounds.LockableSoundEvents;
 import net.minecraft.client.item.TooltipConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -41,11 +42,21 @@ public class WeatheredLockItem extends AbstractLockItem {
 
 	@Override
 	public SoundEvent getLockSound() {
-		return SoundEvents.BLOCK_COPPER_DOOR_CLOSE;
+		return LockableSoundEvents.WEATHERED_LOCK_LOCK;
 	}
 
 	@Override
 	public SoundEvent getUnlockSound() {
-		return SoundEvents.BLOCK_COPPER_DOOR_OPEN;
+		return LockableSoundEvents.WEATHERED_LOCK_UNLOCK;
+	}
+
+	@Override
+	public SoundEvent getPlaceSound() {
+		return LockableSoundEvents.WEATHERED_LOCK_PLACE;
+	}
+
+	@Override
+	public SoundEvent getRemoveSound() {
+		return LockableSoundEvents.WEATHERED_LOCK_REMOVE;
 	}
 }

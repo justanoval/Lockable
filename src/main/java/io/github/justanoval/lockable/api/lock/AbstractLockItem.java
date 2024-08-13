@@ -79,26 +79,6 @@ public abstract class AbstractLockItem extends Item implements LockItem {
 	}
 
 	@Override
-	public SoundEvent getLockSound() {
-		return SoundEvents.BLOCK_IRON_DOOR_CLOSE;
-	}
-
-	@Override
-	public SoundEvent getUnlockSound() {
-		return SoundEvents.BLOCK_IRON_DOOR_OPEN;
-	}
-
-	@Override
-	public SoundEvent getPlaceSound() {
-		return SoundEvents.BLOCK_CHAIN_PLACE;
-	}
-
-	@Override
-	public SoundEvent getRemoveSound() {
-		return SoundEvents.BLOCK_CHAIN_BREAK;
-	}
-
-	@Override
 	public SoundEvent getKeyFailSound() {
 		return LockableSoundEvents.KEY_JIGGLE;
 	}

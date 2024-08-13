@@ -46,7 +46,7 @@ public class LockableConfig extends ReflectiveConfig {
 	public static class BoneKeyConfig extends Section {
 		@FloatRange(min = 0.0, max = 1.0)
 		@Comment("The chance for the bone key to break upon use, between 0.0 and 1.0.")
-		public final TrackedValue<Float> chanceToBreak = this.value(0.8F);
+		public final TrackedValue<Float> chanceToBreak = this.value(0.7F);
 	}
 
 	public static class WeatheredLockConfig extends Section {

@@ -17,6 +17,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.collection.DefaultedList;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 public final class LockableItems {
 	public static final Item GOLDEN_KEY = new NormalKeyItem(new Item.Settings()
@@ -58,9 +59,12 @@ public final class LockableItems {
 		registerItem("master_key", MASTER_KEY, ItemGroups.TOOLS_AND_UTILITIES);
 		registerItem("keychain", KEYCHAIN, ItemGroups.TOOLS_AND_UTILITIES);
 		registerItem("bone_key", BONE_KEY, ItemGroups.TOOLS_AND_UTILITIES);
+	}
 
+	@ClientOnly
+	public static void registerPredicates() {
 		ModelPredicateProviderRegistry.register(KEYCHAIN, LockableMod.id("keys"),
-			(stack, world, entity, seed) -> KeychainItem.getKeys(stack)
+				(stack, world, entity, seed) -> KeychainItem.getKeys(stack)
 		);
 	}
 

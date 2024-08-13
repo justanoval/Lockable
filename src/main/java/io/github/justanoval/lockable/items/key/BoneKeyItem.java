@@ -1,6 +1,7 @@
 package io.github.justanoval.lockable.items.key;
 
 import io.github.justanoval.lockable.LockableMod;
+import io.github.justanoval.lockable.api.key.BreakableKeyItem;
 import net.minecraft.client.item.TooltipConfig;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

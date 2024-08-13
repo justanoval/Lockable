@@ -2,6 +2,7 @@ package io.github.justanoval.lockable.mixin;
 
 import io.github.justanoval.lockable.api.Lockable;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.network.ServerPlayerInteractionManager;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
@@ -16,11 +17,14 @@ public abstract class ServerPlayerInteractionManagerMixin {
 	@Shadow
 	protected ServerWorld world;
 
+	@Shadow
+	protected ServerPlayerEntity player;
+
 	@Inject(method = "tryBreakBlock", at = @At("HEAD"), cancellable = true)
 	public void onTryBreakBlock(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 
-		if (blockEntity != null && Lockable.isLocked(blockEntity)) {
+		if (Lockable.isLocked(blockEntity) && !player.isCreative()) {
 			cir.setReturnValue(false);
 			cir.cancel();
 		}

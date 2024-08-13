@@ -2,7 +2,6 @@ package io.github.justanoval.lockable;
 
 import io.github.justanoval.lockable.config.LockableConfig;
 import io.github.justanoval.lockable.items.LockableItems;
-import io.github.justanoval.lockable.networking.LockablePackets;
 import io.github.justanoval.lockable.sounds.LockableSoundEvents;
 import io.github.justanoval.lockable.world.LockableLootTableHandler;
 import io.github.justanoval.lockable.world.WanderingTraderLootAdditions;
@@ -21,11 +20,10 @@ public final class LockableMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		LockablePackets.registerServerPackets();
 		LockableItems.register();
 		LockableLootTableHandler.register();
-		LockableSoundEvents.register();
 		WanderingTraderLootAdditions.register();
+		LockableSoundEvents.register();
 	}
 
 	public static Identifier id(String name) {

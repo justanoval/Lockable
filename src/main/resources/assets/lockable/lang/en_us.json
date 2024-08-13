@@ -21,5 +21,16 @@
   "item.lockable.lock.has_lock.put_lock": "That block already has a lock!",
   "item.lockable.lock.locked": "That block is locked!",
 
-  "modmenu.lockable.website": "More by me"
+  "modmenu.lockable.website": "More by me",
+
+  "subtitle.lockable.item.key.jiggle": "Key jiggles",
+  "subtitle.lockable.entity.lock.jiggle": "Lock jiggles",
+  "subtitle.lockable.entity.scrap_lock.place": "Scrap lock placed",
+  "subtitle.lockable.entity.scrap_lock.remove": "Scrap lock removed",
+  "subtitle.lockable.entity.scrap_lock.lock": "Scrap lock locked",
+  "subtitle.lockable.entity.scrap_lock.unlock": "Scrap lock unlocked",
+  "subtitle.lockable.entity.weathered_lock.place": "Weathered lock placed",
+  "subtitle.lockable.entity.weathered_lock.remove": "Weathered lock removed",
+  "subtitle.lockable.entity.weathered_lock.lock": "Weathered lock locked",
+  "subtitle.lockable.entity.weathered_lock.unlock": "Weathered lock unlocked"
 }
