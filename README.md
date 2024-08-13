@@ -1,4 +1,10 @@
 ![lockable_title](https://github.com/user-attachments/assets/c7191079-67f6-4eef-8f44-15461c853a77)
+
+![Java 17](https://img.shields.io/badge/language-Java%2017-9B599A.svg?style=flat-square)
+[![GitHub license](https://img.shields.io/github/license/justanoval/Lockable?style=flat-square)](https://raw.githubusercontent.com/justanoval/Lockable/main/LICENSE)
+[![Mod loader: Quilt]][quilt]
+![Version](https://img.shields.io/github/v/tag/justanoval/Lockable?label=version&style=flat-square)
+
 # Lockable
 <img align="right" width="160" src="src/main/resources/assets/lockable/icon.png">
 Lockable is a Minecraft mod for Quilt loader. It adds locks and keys to allow players to protect their items, or steal from others.
@@ -20,3 +26,6 @@ I started developing for Minecraft around 2019-2020. I used to make plugins for 
 If you want to see the other things I work on, check out [my website](https://justanoval.com/). I produce music, make animations, write stories, sell merchandise, and make games.
 
 ![justanoval](https://github.com/user-attachments/assets/1da1f23b-77d4-4bb0-8a5b-e5b2424292ea)
+
+[quilt]: https://quiltmc.org
+[Mod loader: Quilt]: https://img.shields.io/badge/modloader-Quilt-9115ff?style=flat-square
