@@ -93,6 +93,10 @@ publishing {
 	publications {
 		gpr(MavenPublication) {
 			from components.java
+
+			groupId = group
+			artifactId = project.archives_base_name
+			version = version
 		}
 	}
 
@@ -101,7 +105,7 @@ publishing {
 			name = "GitHubPackages"
 			url = uri("https://maven.pkg.github.com/justanoval/Lockable")
 			credentials {
-				username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+				username = project.findProperty("gpr.user") ?: "justanoval"
 				password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
 			}
 		}
