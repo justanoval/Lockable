@@ -4,7 +4,6 @@ import io.github.justanoval.lockable.config.LockableConfig;
 import io.github.justanoval.lockable.items.LockableItems;
 import io.github.justanoval.lockable.sounds.LockableSoundEvents;
 import io.github.justanoval.lockable.world.LockableLootTableHandler;
-import io.github.justanoval.lockable.world.WanderingTraderLootAdditions;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.config.v2.QuiltConfig;
@@ -22,7 +21,6 @@ public final class LockableMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		LockableItems.register();
 		LockableLootTableHandler.register();
-		WanderingTraderLootAdditions.register();
 		LockableSoundEvents.register();
 	}
 

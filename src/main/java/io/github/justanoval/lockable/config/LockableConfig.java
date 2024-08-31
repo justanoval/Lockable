@@ -41,44 +41,25 @@ public class LockableConfig extends ReflectiveConfig {
 	public static class KeychainConfig extends Section {
 		@Comment("The maximum amount of keys a keychain can hold. It's recommended to be greater than or equal to 3.")
 		public final TrackedValue<Integer> maxKeys = this.value(6);
+
+		@Comment("The weight of how likely it is to be in a Nether Fortress chest. The higher, the more likely.")
+		public final TrackedValue<Integer> lootWeight = this.value(3);
 	}
 
 	public static class BoneKeyConfig extends Section {
 		@FloatRange(min = 0.0, max = 1.0)
 		@Comment("The chance for the bone key to break upon use, between 0.0 and 1.0.")
 		public final TrackedValue<Float> chanceToBreak = this.value(0.7F);
+
+		@Comment("The weight of how likely it is to be in suspicious sand or gravel. The higher, the more likely.")
+		public final TrackedValue<Integer> lootWeight = this.value(3);
 	}
 
 	public static class WeatheredLockConfig extends Section {
-		@Comment("Allows for tweaking the trade offers for the Weathered Lock.")
-		public final WanderingTraderConfig wanderingTrader = new WanderingTraderConfig();
+		@Comment("The weight of how likely it is to be in ocean ruins. The higher, the more likely.")
+		public final TrackedValue<Integer> oceanRuinsWeight = this.value(3);
 
-		public static class WanderingTraderConfig extends Section {
-			@Comment("The chance for a Weathered Lock to appear in the trade offers for a Wandering Trader.")
-			public final TrackedValue<Float> chance = this.value(0.3F);
-
-			@Comment("The minimum amount of times a player can buy the trade from the Wandering Trader.")
-			public final TrackedValue<Integer> minUses = this.value(1);
-
-			@Comment("The maximum amount of times a player can buy the trade from the Wandering Trader.")
-			public final TrackedValue<Integer> maxUses = this.value(3);
-
-			@Comment("The minimum amount of experience the player gets from the trade.")
-			public final TrackedValue<Integer> minMerchantExperience = this.value(40);
-
-			@Comment("The maximum amount of experience the player gets from the trade.")
-			public final TrackedValue<Integer> maxMerchantExperience = this.value(60);
-
-			@Comment("The various trades that the Wandering Trader offers for the Weathered Lock.")
-			public final TrackedValue<ValueMap<ValueList<Integer>>> tradeOffers = this.map(ValueList.create(1))
-					.put("minecraft:golden_apple", ValueList.create(1, 1, 3))
-					.put("minecraft:emerald", ValueList.create(1, 32, 64))
-					.put("minecraft:diamond", ValueList.create(1, 2, 6))
-					.put("minecraft:amethyst_shard", ValueList.create(1, 8, 32))
-					.put("minecraft:rabbit_foot", ValueList.create(1, 1, 1))
-					.put("minecraft:blaze_powder", ValueList.create(1, 8, 33))
-					.put("minecraft:netherite_scrap", ValueList.create(1, 4, 7))
-					.build();
-		}
+		@Comment("The weight of how likely it is to be in shipwreck treasure chests. The higher, the more likely.")
+		public final TrackedValue<Integer> shipwreckWeight = this.value(3);
 	}
 }
